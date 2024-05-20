@@ -31,5 +31,7 @@ try {
   if (!pattern.test(input)) {
     console.error("The runners input must be a comma-separated list of strings.");
     core.setFailed("The runners input must be a comma-separated list of strings.");
-  }
+  } else {
+    console.error(error.message);
+    core.setFailed(error.message);
 }
